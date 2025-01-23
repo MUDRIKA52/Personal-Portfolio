@@ -1,0 +1,1075 @@
+html{
+    scroll-behavior: smooth;
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex; /* Align items horizontally */
+justify-content: space-between; /* Space between logo and nav links */
+align-items: center; /* Centers items vertically */
+position: fixed; /* Keeps the navbar fixed at the top */
+top: 0; /* Aligns navbar to the top of the page */
+width: 100%; /* Navbar spans the full width of the viewport */
+padding: 10px 20px; /* Adds padding around navbar items */
+background-color: transparent; /* Semi-transparent background */
+z-index: 1000; /* Ensures the navbar stays on top of other elements */
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: auto; /* Ensure the height adjusts according to the image */
+  max-width: 100%; /* Prevents the logo from exceeding its container */
+}
+
+.logo img {
+  width: 100%; /* Ensures the logo scales according to the width of the container */
+  height: auto; /* Maintains the aspect ratio */
+  max-width: 40px; /* Ensures the logo doesn’t get too large */
+}
+
+/* Adjust logo size for smaller screens */
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 120px; /* Reduce size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 90px; /* Reduce size for small mobile devices */
+  }
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  font-weight: bold; /* Makes the text bold */
+padding: 5px 10px; /* Adds padding around the text */
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+color: rgb(246, 88, 114); /* Changes color to pink on hover */
+border-bottom: 2px solid pink; /* Adds a pink underline effect */
+transform: scale(1.3); /* Slightly increases the size on hover */
+text-shadow: 0px 0px 5px rgba(255, 192, 203, 0.8); /* Adds an illuminated effect */
+transition: all 0.3s ease; /* Smooth transition for hover effects */
+font-size: 1.2rem; /* Increases font size on navbar ho*/
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Hide navigation links on smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    background-color: #444;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Transform hamburger icon to an "X" when active */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
+/* HOME SECTION BEGINS HERE */
+section .bg-video {
+position: absolute; /* Positions video behind content */
+top: 0;
+left: 0;
+width: 100%; /* Full width of the container */
+height: 100%; /* Full height of the container */
+object-fit: cover; /* Ensures the video covers the section completely */
+z-index: -1; /* Places the video behind other content */
+/* Ensure that the video maintains its aspect ratio */
+}
+
+/* Home Section */
+.text-display {
+font-size: 3rem;
+color: #fff;
+text-transform: uppercase;
+letter-spacing: 2px;
+opacity: 1;
+transition: opacity 0.5s ease-in-out;
+font-family: 'Poppins', sans-serif;
+display: block;
+white-space: nowrap;
+text-align: center;
+}
+
+
+.text-display span {
+display: inline-block; /* This ensures each word stays in its place */
+margin-bottom: 10px;
+}
+
+#home {
+position: relative;
+height: 100vh;
+text-align: center;
+color: white;
+font-family: "Poppins", sans-serif;
+overflow: hidden;
+}
+
+/* Video Background */
+.bg-video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: -1;
+}
+
+/* Home Content */
+.home-content {
+position: relative;
+z-index: 1;
+margin-top: 35vh;
+}
+
+/* Text Styling */
+.text-display {
+font-size: 3rem;
+color: #fff;
+text-transform: uppercase;
+letter-spacing: 2px;
+opacity: 1;
+transition: opacity 0.5s ease-in-out;
+font-family: 'Poppins', sans-serif;
+}
+
+/* Mouse Icon Styling */
+.mouse-icon {
+position: absolute;
+bottom: 5%;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.mouse-icon img {
+width: 30px;
+animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+0%, 100% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(-10px);
+}
+}
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+/* Adjust video background for smaller screens */
+.bg-video {
+height: 100vh; /* Ensure it covers full screen */
+}
+
+/* Adjust home-content positioning */
+.home-content {
+margin-top: 25vh; /* Adjust top margin for smaller screens */
+}
+
+/* Adjust text size */
+.text-display {
+font-size: 2rem; /* Smaller text size */
+letter-spacing: 1px; /* Slightly reduced letter spacing */
+}
+
+/* Adjust mouse icon size */
+.mouse-icon img {
+width: 25px; /* Smaller mouse icon */
+}
+}
+
+@media (max-width: 480px) {
+/* Further reduce font size for extra small screens */
+.text-display {
+font-size: 1.5rem; /* Further reduce text size */
+}
+
+/* Further reduce mouse icon size */
+.mouse-icon img {
+width: 20px; /* Even smaller mouse icon */
+}
+}
+
+/* ABOUT SECTION BEGINS HERE */
+
+.about-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.text-container {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s forwards;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-paragraph {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.about-heading:hover {
+font-size: 3rem; /* Increase font size */
+transition: font-size 0.3s ease-in-out; /* Smooth transition effect */
+color: rgb(59, 4, 4);
+text-decoration: underline;
+}
+
+.about-paragraph:hover {
+font-size: 1.4rem; /* Increase font size */
+transition: font-size 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cv-button:hover {
+  background-color: #ff1493;
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+
+
+.profile-image {
+width: 300px; /* Increased width */
+height: 350px; /* Increased height to make it elliptical */
+border-radius: 50% / 40%; /* Makes the shape elliptical */
+border: 5px solid #77043e;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+animation: borderGlow 3s infinite;
+transition: transform 0.4s ease-in-out;
+}
+
+.profile-image:hover {
+transform: scale(1.2) rotate(360deg);
+}
+
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-container, .image-container {
+    transform: none;
+  }
+}
+
+   /* SKILLS SECTION BEGINS HERE */
+   /* Background Video Styling */
+.bg-videos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire section */
+  z-index: -1; /* Pushes the video to the background */
+  opacity: 0.5; /* Adds transparency for better readability of content */
+}
+
+/* Skills Section Styling */
+.skills-section {
+  position: relative; /* Enables absolute positioning for the video */
+  width: 100%;
+  height: 100vh;
+  padding: 50px 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Skills Container Adjustments */
+.skills-container {
+  position: relative;
+  z-index: 2; /* Ensures content appears above the video */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  animation: move-cards 10s linear infinite; /* Animation for the skill cards */
+}
+.skills-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  color: #4c4c6d;
+}
+
+.skills-title:hover {
+  text-decoration: underline;
+  color: darkblue;
+}
+/* Skill Card Styling */
+.skill-card {
+  background-color: #7158e2;
+      border: solid darkblue;
+  border-radius: 10px;
+  padding: 20px;
+  width: 180px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: rotate(-5deg);
+
+}
+
+.skill-card:hover {
+  transform: rotate(0deg) scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Skill Line Styling */
+.skills-line {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  animation: scroll-left 10s linear infinite;
+}
+
+.skills-line.reverse {
+  animation-direction: reverse;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    gap: 15px;
+  }
+
+  .skill-card {
+    width: 150px;
+    height: 140px;
+  }
+}
+
+
+
+/* Stop animation on hover */
+.skills-line:hover {
+  animation-play-state: paused;
+}
+
+/* Scroll Animation (moves between the lines) */
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* PROJECT SECTION BEGINS HERE */
+.bg-videop {
+  position: absolute; /* Positions video behind the content */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  object-fit: cover; /* Ensures the video covers the section completely */
+  z-index: -1; /* Places the video behind the content */
+}
+
+.projects-section {
+  position: relative; /* Creates a containing block for absolutely positioned elements */
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff; /* Ensures text color contrasts with the video background */
+}
+
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #4c4c6d;
+  /* text-decoration: underline; */
+}
+.section-title:hover{
+  text-decoration: underline;
+  color: solid black;
+}
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Card */
+.project-card {
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #333;
+}
+
+.project-card:nth-child(2) {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+.project-card:nth-child(3) {
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.card-header .globe-icon {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.card-header .globe-icon:hover {
+  color: #555;
+}
+
+/* Project Links */
+
+.project-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.project-links li {
+  margin-bottom: 5px;
+}
+
+.project-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+/* Tech Icons */
+.tech-icons {
+  margin-top: 10px;
+}
+
+.tech-icons span {
+  font-size: 1.5rem;
+  margin: 0 5px;
+}
+
+/* Contact Section */
+.contact-section {
+  position: relative;
+  height: 100vh; /* Full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+/* ACHIEVEMENTS SECTION BEGINS HERE */
+
+/* Achievements Section */
+.achievements-section {
+  position: relative;
+  height: 100vh; /* Full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Video Background */
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(50%); /* Dim the video */
+}
+
+/* Achievements Content */
+.achievements-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  border-radius: 15px;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.achievements-title {
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #ff77b4; /* Pink color */
+  transition: color 0.3s ease;
+}
+
+.achievements-title:hover {
+  color: #f0a6ca; /* Lighter pink */
+}
+
+/* Milestones Container */
+.milestones-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.milestone {
+  display: flex;
+  justify-content: center;
+}
+
+.milestone-card {
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  width: 280px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.milestone-card:hover {
+  transform: translateY(-10px); /* Slightly lift the card */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.milestone-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff77b4;
+  text-align: center;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.milestone-title:hover {
+  color: #f0a6ca;
+}
+
+.milestone-desc {
+  font-size: 16px;
+  text-align: center;
+  color: #bbb;
+}
+
+/* Animation for Milestones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .achievements-title {
+    font-size: 30px;
+  }
+
+  .milestones-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .milestone-card {
+    width: 220px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-title {
+    font-size: 24px;
+  }
+
+  .milestones-container {
+    grid-template-columns: 1fr;
+  }
+
+  .milestone-card {
+    width: 200px;
+    height: 160px;
+  }
+}
+
+/* Achievements Section */
+.achievements-section {
+  position: relative;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Video Background */
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure video stays behind content */
+}
+
+/* Achievements Content */
+.achievements-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding: 50px;
+  background-color: transparent; /* Semi-transparent background */
+  border-radius: 15px;
+  width: 80%;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+/* Title */
+.achievements-title {
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #ff77b4; /* Pink color */
+  transition: color 0.3s ease;
+}
+
+.achievements-title:hover {
+  color: #f0a6ca; /* Lighter pink */
+  text-decoration: underline;
+}
+
+/* Milestones Container */
+.milestones-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.milestone {
+  display: flex;
+  justify-content: center;
+}
+
+.milestone-card {
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  width: 280px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.milestone-card:hover {
+  transform: translateY(-10px); /* Slightly lift the card */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.milestone-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff77b4;
+  text-align: center;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.milestone-title:hover {
+  color: #f0a6ca;
+}
+
+.milestone-desc {
+  font-size: 16px;
+  text-align: center;
+  color: #bbb;
+}
+
+/* Animation for Milestones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .achievements-title {
+    font-size: 30px; /* Adjust font size for tablets */
+  }
+
+  .milestones-container {
+    grid-template-columns: 1fr 1fr; /* Change to 2 columns on tablets */
+  }
+
+  .milestone-card {
+    width: 220px; /* Adjust width of cards */
+    height: 180px; /* Adjust height of cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-title {
+    font-size: 24px; /* Smaller font size for smaller screens */
+  }
+
+  .milestones-container {
+    grid-template-columns: 1fr; /* One column on mobile devices */
+  }
+
+  .milestone-card {
+    width: 200px; /* Smaller card width */
+    height: 160px; /* Smaller card height */
+  }
+}
+
+/* CONTACT SECTION BEGINS HERE  */
+.contact-section {
+  position: relative;
+  height: 100vh; /* Full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+/* Video Background */
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Contact Content */
+.contact-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  margin-top: 50px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Title */
+.contact-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.contact-title:hover{
+  text-decoration: underline;
+}
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+label {
+  font-size: 16px;
+  color: white;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+label:hover{
+  text-decoration: underline;
+}
+input:hover{
+  transform: scale(1.05);
+}
+textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #f0a6ca;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e05b92;
+  transform: scale(1.05);
+}
+
+
+  /* Footer Styling */
+footer {
+  background-color: black; /* Background color */
+  color: white; /* Text color */
+  padding: 30px 20px; /* Padding for spacing */
+}
+
+.footer-container {
+  display: flex; /* Flex layout for alignment */
+  justify-content: space-between; /* Space between sections */
+  align-items: flex-start; /* Align items at the top */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer-section, .footer-social, .footer-about {
+  flex: 1; /* Equal width for each section */
+  margin: 10px; /* Spacing around each section */
+  min-width: 200px; /* Minimum width for smaller screens */
+}
+
+.footer-section h4, .footer-social h4, .footer-about h4 {
+  margin-bottom: 10px; /* Space below the heading */
+  text-decoration: underline; /* Underline for headings */
+}
+
+.footer-section ul, .footer-social ul {
+  list-style: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+}
+
+.footer-section ul li, .footer-social ul li {
+  margin-bottom: 8px; /* Space between list items */
+}
+
+.footer-section a, .footer-social a {
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.3s, text-decoration 0.3s; /* Smooth hover effects */
+}
+
+.footer-section a:hover, .footer-social a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: pink; /* Change color on hover */
+}
+
+.footer-about p {
+  margin-top: 10px; /* Space above paragraph */
+  line-height: 1.5; /* Line spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align on smaller screens */
+  }
+
+  .footer-section, .footer-social, .footer-about {
+    text-align: center; /* Center align text */
+  }
+}
