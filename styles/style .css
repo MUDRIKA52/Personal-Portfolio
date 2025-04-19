@@ -299,14 +299,18 @@ width: 20px; /* Even smaller mouse icon */
 .about-heading {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: rgb(126, 32, 32);
+  color: rgb(35, 30, 30);
   transition: all 0.3s ease-in-out;
+  margin: auto;
+  text-align: center;
+  margin-bottom:20px ;
+  text-decoration: underline;
 }
 
 .about-heading:hover {
   font-size: 3rem;
-  color: rgb(172, 65, 65);
-  text-decoration: underline;
+  color: rgb(63, 54, 54);
+
 }
 
 /* Paragraph */
@@ -319,7 +323,7 @@ width: 20px; /* Even smaller mouse icon */
 
 .about-paragraph:hover {
   font-size: 1.4rem;
-  color: rgb(43, 27, 27);
+  color: rgb(94, 57, 57);
   font-weight: bold;
 }
 
