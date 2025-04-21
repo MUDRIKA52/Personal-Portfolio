@@ -60,3 +60,162 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills Section</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #1a1a2e, #16213e);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .skills-section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #a29bfe;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 60px;
+      font-weight: 800;
+      margin-bottom: 60px;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #2f3542;
+      color: white;
+      width: 250px;
+      padding: 30px 20px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    }
+
+    .card img {
+      width: 50px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #dfe6e9;
+    }
+
+    @media screen and (max-width: 768px) {
+      .title {
+        font-size: 40px;
+      }
+
+      .skills-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="skills-section">
+    <h4 class="subtitle">WHAT I DO</h4>
+    <h1 class="title">SKILLS</h1>
+
+    <div class="skills-grid">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Raspberry_Pi_Logo.svg" alt="Raspberry Pi" />
+        <h3>Raspberry Pi</h3>
+        <p>Hands-on experience with Raspberry Pi to develop efficient low-level code for the platform.</p>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/eslint/eslint-original.svg" alt="ESLint" />
+        <h3>ESLint</h3>
+        <p>Ensure code quality and consistency using ESLint in all development processes.</p>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" />
+        <h3>HTML</h3>
+        <p>Strong command of HTML for creating structured, accessible web pages.</p>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
+        <h3>Bootstrap</h3>
+        <p>Proficient in using Bootstrap to design responsive and mobile-friendly interfaces quickly.</p>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" />
+        <h3>Git</h3>
+        <p>Version control using Git for collaborative and individual projects.</p>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="GitHub" />
+        <h3>GitHub</h3>
+        <p>Managing repositories, pull requests, and collaborative workflows on GitHub.</p>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" />
+        <h3>CSS</h3>
+        <p>Design visually appealing, user-focused layouts using CSS.</p>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" />
+        <h3>JavaScript</h3>
+        <p>Create interactive, dynamic interfaces using JavaScript.</p>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" />
+        <h3>React</h3>
+        <p>Build reusable components and manage state using hooks in React.</p>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" />
+        <h3>Tailwind CSS</h3>
+        <p>Utilize utility-first classes in Tailwind CSS for building custom designs rapidly and efficiently.</p>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" />
+        <h3>Python</h3>
+        <p>Automate tasks, analyze data, and build web applications using Python.</p>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" />
+        <h3>MySQL</h3>
+        <p>Design, query, and manage relational databases using MySQL.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

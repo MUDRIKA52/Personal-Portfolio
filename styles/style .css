@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Itim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+IT+Trad:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 html{
     scroll-behavior: smooth;
 }
@@ -9,7 +10,9 @@ html{
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Playwrite IT Trad",  "Itim";
+ 
+  font-style: normal;
 }
 
 .navbar {
@@ -459,121 +462,98 @@ width: 20px; /* Even smaller mouse icon */
 }
 
    /* SKILLS SECTION BEGINS HERE */
-   /* Background Video Styling */
-.bg-videos {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video covers the entire section */
-  z-index: -1; /* Pushes the video to the background */
-  opacity: 0.5; /* Adds transparency for better readability of content */
-}
-
-/* Skills Section Styling */
-.skills-section {
-  position: relative; /* Enables absolute positioning for the video */
-  width: 100%;
-  height: 100vh;
-  padding: 50px 20px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-/* Skills Container Adjustments */
-.skills-container {
-  position: relative;
-  z-index: 2; /* Ensures content appears above the video */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  animation: move-cards 10s linear infinite; /* Animation for the skill cards */
-}
-.skills-title {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 60px;
-  color: #4c4c6d;
-}
-
-.skills-title:hover {
-  text-decoration: underline;
-  color: darkblue;
-}
-/* Skill Card Styling */
-.skill-card {
-  background-color: #7158e2;
-      border: solid darkblue;
-  border-radius: 10px;
-  padding: 20px;
-  width: 180px;
-  height: 160px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transform: rotate(-5deg);
-
-}
-
-.skill-card:hover {
-  transform: rotate(0deg) scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-/* Skill Line Styling */
-.skills-line {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  width: 100%;
-  animation: scroll-left 10s linear infinite;
-}
-
-.skills-line.reverse {
-  animation-direction: reverse;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .skills-container {
-    gap: 15px;
+   
+   .skills-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(to right, #1a1a2e, #16213e);
+    color: #ffffff;
   }
 
-  .skill-card {
-    width: 150px;
-    height: 140px;
+  .subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #a29bfe;
+    margin-bottom: 10px;
   }
-}
 
-
-
-/* Stop animation on hover */
-.skills-line:hover {
-  animation-play-state: paused;
-}
-
-/* Scroll Animation (moves between the lines) */
-@keyframes scroll-left {
-  from {
-    transform: translateX(100%);
+  .title {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 60px;
   }
-  to {
-    transform: translateX(-100%);
+ 
+  .title:hover{
+    text-decoration: underline;
+    transform: scale(1.5);
   }
-}
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background-color: #2f3542;
+    color: white;
+    width: 250px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    animation: slideIn 1s ease-out, shake 0.5s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    animation: none; /* Stop shaking when hovered */
+  }
+
+  .card img {
+    width: 50px;
+    margin-bottom: 20px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #dfe6e9;
+  }
+
+  @keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
+
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 40px;
+    }
+
+    .skills-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 /* PROJECT SECTION BEGINS HERE */
 .bg-videop {
   position: absolute; /* Positions video behind the content */
@@ -704,301 +684,160 @@ width: 20px; /* Even smaller mouse icon */
 }
 /* ACHIEVEMENTS SECTION BEGINS HERE */
 
-/* Achievements Section */
+
+/* Aesthetic Achievements Section */
 .achievements-section {
+  padding: 100px 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
   position: relative;
-  height: 100vh; /* Full height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  z-index: 2;
+  color: #fff;
 }
 
-/* Video Background */
-.video-background video {
+.section-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 60px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+.section-title:hover{
+  transform: scale(1.3);
+}
+/* Grid Layout */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card Styling */
+.achievement-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.6s ease;
+  animation: floaty 6s ease-in-out infinite;
+}
+.achievement-card :hover{
+  transform: scale(1.2);
+}
+
+.achievement-card::before {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5, #4adede, #ff6ec4);
+  background-size: 400% 400%;
+  border-radius: 20px;
   z-index: -1;
-  filter: brightness(50%); /* Dim the video */
+  animation: borderShimmer 10s linear infinite;
+  opacity: 0.25;
 }
 
-/* Achievements Content */
-.achievements-content {
-  position: relative;
-  text-align: center;
-  color: white;
-  z-index: 1;
-  padding: 50px;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-  border-radius: 15px;
-  width: 80%;
-  max-width: 900px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.achievement-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #ffeaa7;
 }
 
-/* Title */
-.achievements-title {
-  font-size: 40px;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: bold;
-  color: #ff77b4; /* Pink color */
-  transition: color 0.3s ease;
+.achievement-card p {
+  font-size: 15px;
+  color: #dfe6e9;
+  line-height: 1.5;
 }
 
-.achievements-title:hover {
-  color: #f0a6ca; /* Lighter pink */
+/* Animations */
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
 
-/* Milestones Container */
-.milestones-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 0 20px;
-  animation: fadeInUp 1s ease-out;
+@keyframes borderShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.milestone {
-  display: flex;
-  justify-content: center;
-}
-
-.milestone-card {
-  background-color: transparent;
-  color: white;
-  padding: 20px;
-  width: 280px;
-  height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-}
-
-.milestone-card:hover {
-  transform: translateY(-10px); /* Slightly lift the card */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.milestone-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ff77b4;
-  text-align: center;
-  transition: color 0.3s ease;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.milestone-title:hover {
-  color: #f0a6ca;
-}
-
-.milestone-desc {
-  font-size: 16px;
-  text-align: center;
-  color: #bbb;
-}
-
-/* Animation for Milestones */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 }
 
-/* Responsive Design */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Trigger animation on scroll */
+.achievement-card.visible {
+  opacity: 1;
+  transform: translateY(0px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .achievements-title {
-    font-size: 30px;
-  }
-
-  .milestones-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .milestone-card {
-    width: 220px;
-    height: 180px;
+  .section-title {
+    font-size: 36px;
   }
 }
 
-@media (max-width: 480px) {
-  .achievements-title {
-    font-size: 24px;
-  }
-
-  .milestones-container {
-    grid-template-columns: 1fr;
-  }
-
-  .milestone-card {
-    width: 200px;
-    height: 160px;
-  }
-}
-
-/* Achievements Section */
+  /* Position video and overlay */
 .achievements-section {
   position: relative;
-  height: 100vh; /* Full screen height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
+  z-index: 1;
 }
 
-/* Video Background */
-.video-background video {
+.achievements-bg-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; /* Ensure video stays behind content */
+  z-index: -2;
+  opacity: 1; /* FULL visible video */
 }
 
-/* Achievements Content */
-.achievements-content {
-  position: relative;
-  text-align: center;
-  color: white;
-  z-index: 1;
-  padding: 50px;
-  background-color: transparent; /* Semi-transparent background */
-  border-radius: 15px;
-  width: 80%;
-  max-width: 1000px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-/* Title */
-.achievements-title {
-  font-size: 40px;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: bold;
-  color: #ff77b4; /* Pink color */
-  transition: color 0.3s ease;
-}
+.achievements-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(5, 5, 25, 0.3); /* just a light tint */ */
+  backdrop-filter: blur(1px); /* minimal blur */
+  z-index: -1;
 
-.achievements-title:hover {
-  color: #f0a6ca; /* Lighter pink */
-  text-decoration: underline;
-}
-
-/* Milestones Container */
-.milestones-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 0 20px;
-  animation: fadeInUp 1s ease-out;
-}
-
-.milestone {
-  display: flex;
-  justify-content: center;
-}
-
-.milestone-card {
-  background-color: transparent;
-  color: white;
-  padding: 20px;
-  width: 280px;
-  height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-}
-
-.milestone-card:hover {
-  transform: translateY(-10px); /* Slightly lift the card */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.milestone-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ff77b4;
-  text-align: center;
-  transition: color 0.3s ease;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.milestone-title:hover {
-  color: #f0a6ca;
-}
-
-.milestone-desc {
-  font-size: 16px;
-  text-align: center;
-  color: #bbb;
-}
-
-/* Animation for Milestones */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .achievements-title {
-    font-size: 30px; /* Adjust font size for tablets */
-  }
-
-  .milestones-container {
-    grid-template-columns: 1fr 1fr; /* Change to 2 columns on tablets */
-  }
-
-  .milestone-card {
-    width: 220px; /* Adjust width of cards */
-    height: 180px; /* Adjust height of cards */
-  }
-}
-
-@media (max-width: 480px) {
-  .achievements-title {
-    font-size: 24px; /* Smaller font size for smaller screens */
-  }
-
-  .milestones-container {
-    grid-template-columns: 1fr; /* One column on mobile devices */
-  }
-
-  .milestone-card {
-    width: 200px; /* Smaller card width */
-    height: 160px; /* Smaller card height */
-  }
 }
 
 /* CONTACT SECTION BEGINS HERE  */
@@ -1178,6 +1017,58 @@ textarea {
   }
 }
 
+/* Fade-in for title */
+.contact-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease, text-decoration 0.3s ease;
+  animation: fadeIn 2s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+/* Each form-group fades in one by one */
+.contact-form .form-group:nth-child(1) {
+  animation: fadeIn 1s ease-out 1s forwards;
+}
+.contact-form .form-group:nth-child(2) {
+  animation: fadeIn 1s ease-out 1.5s forwards;
+}
+.contact-form .form-group:nth-child(3) {
+  animation: fadeIn 1s ease-out 2s forwards;
+}
+.contact-form .form-group:nth-child(4) {
+  animation: fadeIn 1s ease-out 2.5s forwards;
+}
+
+/* Fade-in for submit button */
+.submit-btn {
+  background-color: #f0a6ca;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1s ease-out 3s forwards;
+  opacity: 0;
+}
+
+/* Generic fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Footer Styling */
 footer {
