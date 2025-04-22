@@ -1,0 +1,141 @@
+/* Footer Styling */
+footer {
+    background-color: black; /* Background color */
+    color: white; /* Text color */
+    padding: 30px 20px; /* Padding for spacing */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s forwards; /* Fade-in animation */
+  }
+  
+  /* Animation for fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .footer-container {
+    display: flex; /* Flex layout for alignment */
+    justify-content: space-between; /* Space between sections */
+    align-items: flex-start; /* Align items at the top */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  .footer-section, .footer-social, .footer-about {
+    flex: 1; /* Equal width for each section */
+    margin: 10px; /* Spacing around each section */
+    min-width: 200px; /* Minimum width for smaller screens */
+    opacity: 0; /* Initially hidden */
+    animation: slideUp 1s forwards; /* Slide-up animation */
+  }
+  
+  /* Animation for slide-up effect */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Start from below */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End at normal position */
+    }
+  }
+  
+  .footer-section:nth-child(1) {
+    animation-delay: 0.5s; /* Delay for first section */
+  }
+  
+  .footer-section:nth-child(2) {
+    animation-delay: 1s; /* Delay for second section */
+  }
+  
+  .footer-section:nth-child(3) {
+    animation-delay: 1.5s; /* Delay for third section */
+  }
+  
+  .footer-social, .footer-about {
+    animation-delay: 2s; /* Delay for social and about sections */
+  }
+  
+  .footer-section h4, .footer-social h4, .footer-about h4 {
+    margin-bottom: 10px; /* Space below the heading */
+    text-decoration: underline; /* Underline for headings */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color transition and scale effect on hover */
+  }
+  
+  .footer-section h4:hover, .footer-social h4:hover, .footer-about h4:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+    color: pink; /* Change color on hover */
+  }
+  
+  .footer-section ul, .footer-social ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+  }
+  
+  .footer-section ul li, .footer-social ul li {
+    margin-bottom: 8px; /* Space between list items */
+    transition: transform 0.3s; /* Smooth scale transition */
+  }
+  
+  /* Hover effects for section links and social media icons */
+  .footer-section a, .footer-social a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline by default */
+    transition: color 0.3s, text-decoration 0.3s, transform 0.3s; /* Smooth hover effects */
+  }
+  
+  /* Hover effect on Section Links */
+  .footer-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: pink; /* Change color on hover */
+    transform: scale(1.2); /* Scale effect on hover */
+  }
+  
+  /* Hover effect on Social Media Links */
+  .footer-social a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: pink; /* Change color on hover */
+    transform: scale(1.2); /* Scale effect on hover */
+  }
+  
+  /* Hover effect on Social Media Icon List Item */
+  .footer-social ul li:hover {
+    transform: scale(1.05); /* Scale effect on icon hover */
+  }
+  
+  /* Hover effect on Footer Sections */
+  .footer-section ul li:hover {
+    transform: scale(1.05); /* Scale effect on section list items */
+  }
+  
+  .footer-about p {
+    margin-top: 10px; /* Space above paragraph */
+    line-height: 1.5; /* Line spacing */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s forwards; /* Fade-in animation for About Me */
+    animation-delay: 2.5s; /* Delay to make it appear last */
+  }
+  
+  /* Scale effect on hover for paragraph */
+  .footer-about p:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: pink; /* Change color on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack sections vertically */
+      align-items: center; /* Center align on smaller screens */
+    }
+  
+    .footer-section, .footer-social, .footer-about {
+      text-align: center; /* Center align text */
+    }
+  }
+  

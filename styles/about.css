@@ -1,0 +1,216 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Itim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+IT+Trad:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* ABOUT SECTION BEGINS HERE */
+.about-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 40px 20px;
+    font-family: "Winky Rough", sans-serif;
+    font-optical-sizing: auto;
+    align-items: center;
+    
+  }
+  
+  /* Background Video */
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* Content Flex Container */
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  /* Text Container with Animation */
+  .text-container {
+    flex: 1;
+    animation: slideInLeft 1.2s ease forwards;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  
+  /* Heading */
+  .about-heading {
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+    color: rgb(35, 30, 30);
+    transition: all 0.3s ease-in-out;
+    margin: auto;
+    text-align: center;
+    margin-bottom:20px ;
+    text-decoration: underline;
+  }
+  
+  .about-heading:hover {
+    font-size: 3.5rem;
+    color: rgb(63, 54, 54);
+  
+  }
+  
+  /* Paragraph */
+  .about-paragraph {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .about-paragraph:hover {
+    font-size: 1.9rem;
+    color: rgb(94, 57, 57);
+    font-weight: bold;
+  }
+  
+  /* CV Button */
+  .cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .cv-button:hover {
+    background-color: #ff1493;
+    transform: scale(1.3);
+  }
+  
+  /* Blob Container with Animation */
+  .blob-container {
+    width: 380px;
+    height: 380px;
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+    overflow: hidden;
+    border: 2px solid #7e0606;
+    box-shadow:
+      0 0 20px rgba(219, 124, 124, 0.4),
+      0 0 40px rgba(210, 74, 74, 0.2),
+      0 0 60px rgba(231, 49, 49, 0.1);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* Image inside Blob */
+  .blob-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(1.1);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .blob-container:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* KEYFRAMES */
+  @keyframes morph {
+    0%, 100% {
+      border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+    }
+    33% {
+      border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%;
+    }
+    66% {
+      border-radius: 50% 50% 40% 60% / 30% 70% 60% 40%;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* RESPONSIVENESS */
+  @media (max-width: 1024px) {
+    .about-heading {
+      font-size: 2rem;
+    }
+  
+    .about-paragraph {
+      font-size: 1rem;
+    }
+  
+    .blob-container {
+      width: 280px;
+      height: 280px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      text-align: center;
+      gap: 3rem;
+    }
+  
+    .text-container {
+      transform: none;
+      animation: fadeInUp 1.5s ease-in-out forwards;
+    }
+  
+    .blob-container {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-heading {
+      font-size: 1.8rem;
+    }
+  
+    .about-paragraph {
+      font-size: 0.95rem;
+    }
+  
+    .cv-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  

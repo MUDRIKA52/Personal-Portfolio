@@ -6,6 +6,15 @@
   <title>Mudrika Tiwari</title> <!-- Title of the website -->
   <link rel="stylesheet" href="styles\style .css"> <!-- Links the CSS file for styling -->
   <link rel="icon" href="assets\images\logo.jpg"> <!-- Adds a favicon to the website -->
+
+  <link rel="stylesheet" href="styles\home.css">
+  <link rel="stylesheet" href="styles\about.css">
+  <link rel="stylesheet" href="styles\skills.css">
+  <link rel="stylesheet" href="styles\achievements.css">
+  <link rel="stylesheet" href="styles\contact.css">
+  <link rel="stylesheet" href="styles\footer.css">
+  <link rel="stylesheet" href="styles\projects.css">
+  <link rel="stylesheet" href="styles\navbar.css">
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -43,6 +52,7 @@
 
  
 </header>
+
 <!-- Home Section with Background Video -->
 <section id="home">
   <!-- Background video for the Home section -->
@@ -81,7 +91,7 @@
   </div>
 </section>
 
-<section class="skills-section">
+<section class="skills-section" id="skills">
   <h4 class="subtitle"></h4>
   <h1 class="title">SKILLS</h1>
 
@@ -149,74 +159,69 @@
   </div>
 </section>
 <!-- PROJECT SECTION BEGINS HERE -->
-<section class="projects-section "  id="projects">
-  <video autoplay muted loop class="bg-videop">
-    <source src="assets\projects.mp4" type="video/mp4"> <!-- Video file for the section -->
-  </video>
-  <h2 class="section-title">My Projects </h2>
-  <div class="projects-title">
-    
-    <p>Some of the amazing projects I have worked on!</p>
-  </div><br><br><br>
+<section id="projects" class="projects-section" id="projects">
+  <h1 class="section-titlep">PROJECTS</h1>
   <div class="projects-grid">
-    <!-- Project Card 1 -->
-    <div class="project-card">
-      <div class="card-header">
-        <h3>Android & iOS Apps</h3>
-        <a href="#" class="globe-icon" title="View More">🌐</a>
-      </div>
-      <p>Development of 3 cross-platform mobile apps made with Apache Cordova.</p>
-      <ul class="project-links">
-        <li><a href="#">Canary Enjoy</a></li>
-        <li><a href="#">Gabbeach App</a></li>
-        <li><a href="#">Pensione Alicante App</a></li>
-      </ul>
-      <p>Developed together with <a href="#">Andrea Pozza</a> & <a href="#">Cristian Zecca</a>.</p>
-      <div class="tech-icons">
-        <span>📱</span> <span>🌐</span> <span>🐘</span>
-      </div>
+    <div class="project-card" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+      <img src="assets\Projects\Personal Portfolio.png" alt="Personal Portfolio">
+      <h3>Personal-Portfolio</h3>
+      <p>A responsive, single-page portfolio website showcasing your skills, projects, and contact info.</p>
+      <a href="https://mudrika52.github.io/Personal-Portfolio/" class="demo-link">See the Demo</a>
     </div>
-
-    <!-- Project Card 2 -->
-    <div class="project-card">
-      <div class="card-header">
-        <h3>E-Commerce Websites</h3>
-        <a href="#" class="globe-icon" title="View More">🌐</a>
-      </div>
-      <p>Development and maintenance of 3 e-commerce websites powered by CodeIgniter.</p>
-      <ul class="project-links">
-        <li><a href="#">pistasta.it</a></li>
-        <li><a href="#">sicily.prodottitipici.it</a></li>
-        <li><a href="#">donocasion.es</a></li>
-      </ul>
-      <p>Developed for <a href="#">Essedi IT Consulting</a>.</p>
-      <div class="tech-icons">
-        <span>🔥</span> <span>🐘</span> <span>💻</span>
-      </div>
+    <div class="project-card" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+      <img src="assets\Projects\UTSAV MITRA.png" alt="Utsav Mitra">
+      <h3>Utsav-Mitra</h3>
+      <p>A festive event management platform designed to help users discover, plan, and manage cultural events.</p>
+      <a href="https://utsav-mitra.netlify.app/" class="demo-link">See the Demo</a>
     </div>
-
-    <!-- Project Card 3 -->
-    <div class="project-card">
-      <div class="card-header">
-        <h3>Blogs & Landings</h3>
-        <a href="#" class="globe-icon" title="View More">🌐</a>
-      </div>
-      <p>Development of 2 blogs and this portfolio. Used Node.js (Vue) & Webpack.</p>
-      <ul class="project-links">
-        <li><a href="#">ambidestro.it</a></li>
-        <li><a href="#">pnzdevs.com</a></li>
-        <li><a href="#">tiapnn.netlify.app</a></li>
-      </ul>
-      <p>Check out my blog posts for regular updates on programming and topics I'm working on!</p>
-      <div class="tech-icons">
-        <span>🔗</span> <span>🌟</span> <span>📜</span>
-      </div>
+    <div class="project-card" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+      <img src="assets\Projects\MULTI PAGE PORTFOLIO WEBSITE.png" alt="Exemplary Portfolio">
+      <h3>Exemplary-multipage-personal-portfolio</h3>
+      <p>A multipage portfolio with sections for projects, about, and contact, enhancing navigation.</p>
+      <a href="https://exemplary-multipage-personalportfolio.netlify.app/" class="demo-link">See the Demo</a>
+    </div>
+    <div class="project-card" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+      <img src="assets\Projects\Fakestore API.png" alt="E-commerce Site">
+      <h3>E-commerce-site-Fakestore-api</h3>
+      <p>A React-based store using FakeStore API, includes add-to-cart functionality and product modals.</p>
+      <a href="https://e-commerece-site-fakestore-api.netlify.app/" class="demo-link">See the Demo</a>
+    </div>
+    <div class="project-card" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+      <img src="assets\Projects\DINE DIVINE.png" alt="Dine Divine">
+      <h3>Dine-Divine-Restaurant-Booking-Site</h3>
+      <p>A modern site for restaurant menus and reservations, focusing on great user experience.</p>
+      <a href="https://mudrika52.github.io/Dine-Divine-Restaurant-Booking-Site/" class="demo-link">See the Demo</a>
+    </div>
+    <div class="project-card" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+      <img src="assets\Projects\ALCAMI ELEMENTS.png" alt="3D Cube">
+      <h3>Alcami-Elements-Assignment-Cube</h3>
+      <p>A creative 3D cube animation project showcasing interactive cube transitions.</p>
+      <a href="https://mudrika52.github.io/Alcami-Elements-Assignment-Cube/" class="demo-link">See the Demo</a>
+    </div>
+    <div class="project-card" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+      <img src="assets\Projects\IOT BASED ENVIRONMENTAL MODELLING.png" alt="IoT Environmental Modelling">
+      <h3>IOT-BASED-ENVIRONMENTAL-MODELLING</h3>
+      <p>Monitors and models environmental data like air quality using IoT technologies in real time.</p>
+      <a href="https://github.com/MUDRIKA52/IOT-BASED-ENVIRONMENTAL-MODELLING" class="demo-link">See the Demo</a>
+    </div>
+    <div class="project-card" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+      <img src="assets\Projects\DATA-DRIVEN INSIGHTS VISUALIZER.png" alt="Data Visualizer">
+      <h3>Data-Driven-Insights-Visualizer</h3>
+      <p>A Python-based tool for analyzing datasets and visualizing insights using ML and data libraries.</p>
+      <a href="https://github.com/MUDRIKA52/Data-Driven-Insights-Visualizer" class="demo-link">See the Demo</a>
+    </div>
+    <div class="project-card" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+      <img src="assets\Projects\Weather app.png" alt="Weather App">
+      <h3>WEATHER-AAP-</h3>
+      <p>Weather forecast app with real-time API integration and a user-friendly, location-aware UI.</p>
+      <a href="https://mudrika52.github.io/WEATHER-AAP-/" class="demo-link">See the Demo</a>
     </div>
   </div>
+</section>
   
 </section>
   <!-- Achievements Section -->
-<section class="achievements-section">
+<section class="achievements-section" id="achievements">
   <!-- Background Video -->
   <video autoplay muted loop playsinline class="achievements-bg-video">
     <source src="assets\Achievements Page.mp4" type="video/mp4">
@@ -230,20 +235,22 @@
   <h2 class="section-title">🎯 Achievements</h2>
   <div class="achievements-grid">
     <div class="achievement-card">
-      <h3>🏆 CodeFest Winner</h3>
-      <p>Won 1st prize among 500+ participants at a national-level coding competition.</p>
+      <h3>🏆First Prize in Idea Pitching Competition at Bansal Institute </h3>
+      <p>Won 1st prize in Idea Pitching Competiotion at Bansal Institue.</p>
     </div>
     <div class="achievement-card">
-      <h3>☁️ Google Cloud Arcade</h3>
-      <p>Completed all quests and earned swags through consistent cloud skill building.</p>
+      <h3>☁️ Big Data Training</h3>
+      <p>Completed Samsung innovation training in big data</p>
     </div>
     <div class="achievement-card">
-      <h3>💡 100+ GitHub Commits</h3>
-      <p>Maintained a healthy open-source contribution streak across various projects.</p>
+      <h3>💡 Data Structures With Java</h3>
+      <p>Data Strutcures with Java Course completed on NPTEL</p>
     </div>
     <div class="achievement-card">
       <h3>👩‍💻 Internship Completion</h3>
-      <p>Frontend intern at Codtech IT Solutions with hands-on real-world project experience.</p>
+      <p>Frontend intern at Codtech IT Solutions with hands-on real-world project experience.
+        Full-Stack Web Development interns at Codtech IT Solutions and Exposys Data Labs
+      </p>
     </div>
   </div>
 </section>
@@ -274,15 +281,15 @@
     
     <form class="contact-form" id="contact-form" autocomplete="on">
       <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
       </div>
       <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email">Email:</label>
           <input type="email" id="email" name="email" placeholder="Your Email" required autocomplete="email">
       </div>
       <div class="form-group">
-          <label for="message">Message</label>
+          <label for="message">Message:</label>
           <textarea id="message" name="message" placeholder="Your Message" rows="4" required autocomplete="off"></textarea>
       </div>
       <button type="submit" class="submit-btn">Send Message</button>

@@ -1,0 +1,199 @@
+/* HOME SECTION BEGINS HERE */
+section .bg-video {
+    position: absolute; /* Positions video behind content */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    object-fit: cover; /* Ensures the video covers the section completely */
+    z-index: -1; /* Places the video behind other content */
+    /* Ensure that the video maintains its aspect ratio */
+    }
+    
+    /* Home Section */
+    .text-display {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    white-space: nowrap;
+    text-align: center;
+    }
+    
+    
+    .text-display span {
+    display: inline-block; /* This ensures each word stays in its place */
+    margin-bottom: 10px;
+    }
+    
+    #home {
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    }
+    
+    /* Video Background */
+    .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    }
+    
+    /* Home Content */
+    .home-content {
+    position: relative;
+    z-index: 1;
+    margin-top: 35vh;
+    }
+    
+    /* Text Styling */
+    .text-display {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    }
+    
+    /* Mouse Icon Styling */
+    .mouse-icon {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    
+    .mouse-icon img {
+    width: 30px;
+    animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    }
+    /* Responsive Design for Smaller Screens */
+    @media (max-width: 768px) {
+    /* Adjust video background for smaller screens */
+    .bg-video {
+    height: 100vh; /* Ensure it covers full screen */
+    }
+    
+    /* Adjust home-content positioning */
+    .home-content {
+    margin-top: 25vh; /* Adjust top margin for smaller screens */
+    }
+    
+    /* Adjust text size */
+    .text-display {
+    font-size: 2rem; /* Smaller text size */
+    letter-spacing: 1px; /* Slightly reduced letter spacing */
+    }
+    
+    /* Adjust mouse icon size */
+    .mouse-icon img {
+    width: 25px; /* Smaller mouse icon */
+    }
+    }
+    
+    @media (max-width: 480px) {
+    /* Further reduce font size for extra small screens */
+    .text-display {
+    font-size: 1.5rem; /* Further reduce text size */
+    }
+    
+    /* Further reduce mouse icon size */
+    .mouse-icon img {
+    width: 20px; /* Even smaller mouse icon */
+    }
+    }
+    /* Tablet View */
+@media (max-width: 992px) {
+    .contact-content {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .contact-title {
+      font-size: 30px;
+    }
+  
+    .submit-btn {
+      padding: 12px 25px;
+      font-size: 1.1rem;
+    }
+  
+    input, textarea {
+      font-size: 15px;
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .contact-content {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .contact-title {
+      font-size: 26px;
+      line-height: 1.2;
+    }
+  
+    label {
+      font-size: 14px;
+    }
+  
+    input, textarea {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  
+  /* Very Small Devices */
+  @media (max-width: 480px) {
+    .contact-title {
+      font-size: 22px;
+    }
+  
+    .contact-content {
+      padding: 10px;
+    }
+  
+    .submit-btn {
+      font-size: 0.95rem;
+      padding: 8px 16px;
+    }
+  
+    .form-group label {
+      font-size: 13px;
+    }
+  
+    input, textarea {
+      font-size: 13px;
+      padding: 6px;
+    }
+  }
+  

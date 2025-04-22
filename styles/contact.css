@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Italianno&family=Itim&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+IT+Trad:wght@100..400&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Vollkorn:wght@400..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+  /* CONTACT SECTION BEGINS HERE  */
+  .contact-section {
+    position: relative;
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out; /* Animation for fade-in */
+    font-family: "Vollkorn", serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+  
+  /* Animation for fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Video Background */
+  .video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    animation: zoomIn 10s infinite alternate; /* Animation for background zoom effect */
+  }
+  
+  /* Animation for zoom-in effect */
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Contact Content */
+  .contact-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    animation: slideUp 5s ease-out; /* Slide-up animation for contact content */
+    font-family: "Vollkorn", serif;
+  }
+  
+  /* Animation for slide-up effect */
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Title */
+  .contact-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .contact-title:hover {
+    text-decoration: underline;
+    transform: scale(1.1); /* Slight scale effect on hover */
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeInUp 3s ease-out; /* Animation for form content */
+    font-family: "Vollkorn", serif;
+  }
+  
+  /* Animation for form content */
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  label {
+    font-size: 16px;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  label:hover {
+    text-decoration: underline;
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    transition: transform 0.3s ease;
+    font-family: "Vollkorn", serif;
+  }
+  
+  input:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    background-color: #f0a6ca;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: "Vollkorn", serif;
+  }
+  
+  .submit-btn:hover {
+    background-color: #e05b92;
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-content {
+      width: 90%; /* Increase the width for smaller screens */
+      padding: 20px;
+    }
+  
+    .contact-title {
+      font-size: 28px; /* Smaller font size for title */
+    }
+  
+    .form-group label {
+      font-size: 14px; /* Smaller label font size */
+    }
+  
+    .submit-btn {
+      padding: 12px 25px; /* Smaller padding for button */
+      font-size: 1rem; /* Smaller font size for button */
+    }
+  }
+  
+  /* Fade-in for title */
+  .contact-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease, text-decoration 0.3s ease;
+    animation: fadeIn 2s ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+  }
+  
+  /* Each form-group fades in one by one */
+  .contact-form .form-group:nth-child(1) {
+    animation: fadeIn 1s ease-out 1s forwards;
+  }
+  .contact-form .form-group:nth-child(2) {
+    animation: fadeIn 1s ease-out 1.5s forwards;
+  }
+  .contact-form .form-group:nth-child(3) {
+    animation: fadeIn 1s ease-out 2s forwards;
+  }
+  .contact-form .form-group:nth-child(4) {
+    animation: fadeIn 1s ease-out 2.5s forwards;
+  }
+  
+  /* Fade-in for submit button */
+  .submit-btn {
+    background-color: #f0a6ca;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1s ease-out 3s forwards;
+    opacity: 0;
+  }
+  
+  /* Generic fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
